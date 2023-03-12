@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript</title>
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../Images/caja logo.svg">
+</head>
+<body>
+    <div class="fondo-contenedor h-full w-full grid grid-rows-[100px_3500px_100px] sm:grid-rows-[100px_3100px_100px] lg:grid-rows-[120px_2450px_100px]">
+        <div class="z-30 w-[70px] lg:w-[90px] h-[70px] lg:h-[90px] fixed top-[10px] md:top-[30px] left-[10px] md:left-[30px]">
+            <a href="../index.html"><img id="Zoom" src="../Images/caja logo.svg" alt="Home"></a>
+        </div>
+
+        <menu class="flex justify-center items-end">
+            <div class="pt-5 text-4xl md:text-6xl lg:text-7xl">
+                <h1 class="tipografia-Typescript">typeScript</h1>
+            </div>
+        </menu>
+
+        <main class="w-full h-full grid grid-rows-[1fr_1fr_500px_1fr_300px] sm:[1fr_1fr_1fr_1fr_300px] ">
+            <div class="px-16 py-8 pt-14 lg:pt-28 w-full h-full lg:px-40">
+                <section class="flex flex-col lg:items-start w-full h-full">
+                    <div class="w-full flex justify-center lg:justify-start">
+                        <h1 class="text-3xl md:text-5xl mb-8 tipografia-subtitulos">Qué es?</h1>
+                    </div>
+
+                    <div class="flex flex-col justify-center lg:flex-row lg:justify-between items-center w-full">
+                        <p class="text-center lg:text-left text-md md:text- w-[80%] lg:text-xl xl:w-full tipografia-parrafo">
+                            TypeScript es un lenguaje orientado a objetos (como el lenguaje R, por ejemplo). Esto quiere decir que tanto el cliente como el servidor tienen acceso a la escritura de código. Además, se trata de un código abierto.
+                            Por otro lado, destaca por ser multiplataforma y, por consiguiente, ser portátil. Es decir, se puede emplear desde cualquier dispositivo, sistema operativo o navegador. Del mismo modo que JavaScript, no requiere de ninguna máquina específica.
+                        </p>
+                        <div class="w-full h-full flex justify-center lg:justify-end items-center">
+                            <img  class="h-[150px] mt-5 lg:mt-0 lg:h-[250px] hover:animate-[spin_2s_ease]" src="../Images/typescript logo.svg" alt="TypeScript">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="px-16 py-8 pb-12 lg:pb-0 w-full h-full lg:px-40">
+                <section class="flex flex-col lg:items-start w-full h-full">
+                    <div class="w-full flex justify-center lg:justify-start">
+                        <h1 class="text-3xl md:text-5xl mb-8 tipografia-subtitulos">En qué se usa</h1>
+                    </div>
+
+                    <div class="flex flex-col justify-center lg:justify-between items-center lg:items-start w-full">
+                        <h2 class="tipografia-parrafo text-xl lg:text-2xl text-center lg:text-left">Algunos desarrolladores web dudan al dar el paso a la programación directamente con TypeScript. A continuación, te contamos algunas razones de peso por las que te recomendamos ahondar en el aprendizaje de esta herramienta:</h2>
+                        <ul class="w-full text-left pt-10 pl-10 lg:pl-0 text-lg">
+                            <li class="text-left text-lg lg:text-xl tipografia-parrafo mb-8">• Aporta muchísimas herramientas y funciones al desarrollo con JavaScript. Sobre todo, te recomendamos usarlo por la posibilidad de usar tipados, pues te permite determinar interfaces.</li>
+                            <li class="text-left text-lg lg:text-xl tipografia-parrafo">• Así como con JavaScript, podrás usarlo para desarrollar tanto en el backend como en el lado frontal de la web frontend. El motivo de esto es que al final todo se va a traducir o convertir a JavaScript, por lo que no tendremos problemas de interpretación por parte del navegador o de un run de node.js.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="px-22 py-14 pb-16 lg:pb-14 w-full h-full lg:px-40">
+                <section class="flex flex-col lg:items-start w-full h-full">
+                    <div class="w-full flex justify-center lg:justify-start">
+                        <h1 class="text-3xl md:text-5xl mb-4 tipografia-subtitulos">Hello World:</h1>
+                    </div>
+
+                    <div class="h-full w-full flex justify-center items-center">
+                        <div class="h-[200px] w-[300px] md:w-[450px] lg:w-[600px]">
+                            <img src="../Images/typescript_hello_world.svg" alt="" class="w-full h-full">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="px-16 py-8 w-full h-full lg:px-40">
+                <section class="flex flex-col lg:items-start w-full h-full">
+                    <div class="w-full flex justify-center lg:justify-start">
+                        <h1 class="text-3xl md:text-5xl mb-8 tipografia-subtitulos">Empresas que lo usan</h1>
+                    </div>
+
+                    <div class="flex flex-col justify-center lg:flex-row lg:justify-between items-center w-full">
+                        <ul class="w-full text-3xl text-center lg:text-left">
+                            <li class="tipografia-parrafo">• Parte del Framework Node JS</li>
+                            <li class="tipografia-parrafo">• YouTube</li>
+                            <li class="tipografia-parrafo">• Facebook</li>
+                            <li class="tipografia-parrafo">• WordPress CMS</li>
+                            <li class="tipografia-parrafo">Si quieres más info
+                                <a href="https://blog.nubecolectiva.com/que-es-typescript-y-otros-detalles/#Proyectos_creados_con_TypeScript">
+                                    <button id="Efecto_Botones1" class="w-[130px] h-[50px] rounded border border-black bg-gradient-to-r from-white to-[#C66AAB] tipografia-parrafo">clickea</button>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="w-full h-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p class="title tipografia-subtitulos">DATO CURIOSO</p>
+                                        <p class="tipografia-parrafo">Tócame</p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p class="title tipografia-parrafo">El nombre original de este lenguaje de programación era Strada</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="px-16 py-8 w-full h-full lg:px-40">
+                <section class="w-full h-full flex  flex-col justify-center items-center">
+                    <div class="w-full h-[70px] flex justify-center items-center">
+                        <h1 class="text-xl md:text-3xl text-center tipografia-parrafo">
+                            Si te interesa este lenguaje, te dejamos más información 😁
+                        </h1>
+                    </div>
+
+                    <div class="flex flex-col justify-center lg:justify-between items-center lg:items-start w-full">
+                        <p class="text-left text-md lg:text-lg tipografia-parrafo mb-2 hover:text-[#68417f]  hover:underline">
+                            <a href="https://desarrolloweb.com/articulos/introduccion-a-typescript.html">
+                                https://desarrolloweb.com/articulos/introduccion-a-typescript.html
+                            </a>
+                        </p>
+                        <p class="text-left text-md lg:text-lg tipografia-parrafo mb-2 hover:text-[#68417f]  hover:underline">
+                            <a href="https://www.w3schools.com/typescript/typescript_intro.php">
+                                https://www.w3schools.com/typescript/typescript_intro.php
+                            </a>
+                        </p>
+                        <p class="text-left text-md lg:text-lg tipografia-parrafo mb-2 hover:text-[#68417f]  hover:underline">
+                            <a href="https://www.youtube.com/watch?v=-xDZwb-PY0M">
+                                https://www.youtube.com/watch?v=-xDZwb-PY0M
+                            </a>
+                        </p>
+                        <p class="text-left text-md lg:text-lg tipografia-parrafo mb-2 hover:text-[#68417f]  hover:underline">
+                            <a href="https://www.youtube.com/watch?v=xtp_DuPxo9Q ">
+                                https://www.youtube.com/watch?v=xtp_DuPxo9Q
+                            </a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="w-full h-full flex justify-end items-end">
+            <div class="z-0 w-[100%] h-[100%] text-white flex justify-end items-end cursor-default">
+                <p id="Bounce" class="m-[2%] text-black">
+                    Display: ©0de
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

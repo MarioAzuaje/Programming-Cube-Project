@@ -1,0 +1,474 @@
+#Ocultar{
+    overflow: hidden;
+}
+
+#Container{
+    perspective: 600px;
+    margin: 0 auto;
+}
+
+.Cubo{
+    position: relative;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0 200px;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+#Efecto_Botones{
+    transition: all 0.3s ease;
+}
+
+#Efecto_Botones:focus{
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 white;
+    border-color: black;
+}
+
+#Efecto_Botones:focus p{
+    width: 100%;
+    color: black;
+}
+
+#Efecto_Botones1{
+    transition: all 0.3s ease;
+}
+
+#Efecto_Botones1:hover{
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+    border-color: white;
+}
+
+#Efecto_FadeIzq{
+    translate: -100px 0;
+    opacity: 0;
+    transition: translate 1s, opacity 1s;
+}
+
+#Efecto_Fade_BotonIzq{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#Opacity1{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#Efecto_Mover_CuboIzq{
+    padding-left: 0%;
+    transition: padding-left 1s;
+}
+
+#Efecto_FadeDer{
+    translate: 0 0;
+    opacity: 1;
+    transition: translate 1s, opacity 1s;
+}
+
+#Efecto_Fade_BotonDer{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#Efecto_Mover_CuboDer{
+    padding-left: 20%;
+    transition: padding-left 1s;
+}
+
+#ZoomLetra{
+    transition: font-size 0.3s ease;
+}
+
+#ZoomLetra:hover{
+    font-size: 1.6rem;
+}
+
+#Zoom{
+    transition: transform 0.3s ease;
+}
+
+#Zoom:hover{
+    transform: scale(1.2);
+}
+
+#Zoom:focus{
+    transform: scale(1);
+}
+
+#Hover_Fondo_Blanco:hover div{
+    background-color: white;
+}
+
+#Bounce:hover {
+    animation: Bounce 1s ease;
+}
+
+@keyframes Bounce {
+    30% {
+    transform: scale(1.2);
+    }
+    40%, 60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#Cubo-Front{
+    transform: translateZ(100px);
+}
+
+#Cubo-Back{
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+#Cubo-Left{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+#Cubo-Right{
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+#Cubo-Top{
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+#Cubo-Bottom{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+#RotacionCubo_Javascript{
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+}
+
+#RotacionCubo_Python{
+    transform: rotateY(180deg) rotateX(360deg);
+}
+
+#RotacionCubo_Csharp{
+    transform: rotateY(90deg) rotateX(360deg) rotateZ(360deg);
+}
+
+#RotacionCubo_Typescript{
+    transform: rotateY(90deg) rotateX(180deg) rotateZ(180deg);
+}
+
+#RotacionCubo_Java{
+    transform: rotateY(270deg) rotateX(270deg) rotateZ(90deg);
+}
+
+#RotacionCubo_Go{
+    transform: rotateY(180deg) rotateX(90deg) rotateZ(180deg);
+}
+
+#Rotar_Ar{
+    animation: rotate1 4s ease;
+}
+
+@keyframes rotate1{
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+
+#Rotar_Ab{
+    animation: rotate2 4s ease;
+}
+
+@keyframes rotate2{
+    100%{
+        transform: rotateX(-360deg);
+    }
+}
+
+#Rotar_Izq{
+    animation: rotate3 4s ease;
+}
+
+@keyframes rotate3{
+    100%{
+        transform: rotateY(-360deg);
+    }
+}
+
+#Rotar_Der{
+    animation: rotate4 4s ease;
+}
+
+@keyframes rotate4{
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+.Borde_Rosa {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: RotacionCuboRosa 3s ease-in-out 0s infinite alternate;
+}
+
+.Borde_Blanco {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    left: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    animation: RotacionCuboBlanco 3s ease-in-out 0s infinite alternate;
+}
+
+.Caja_Interna_Gris {
+    width: 100%;
+    height: 100%;
+    background-color: #161c23;
+}
+
+@keyframes RotacionCuboRosa {
+    0% {
+    transform: rotate(0);
+    }
+    25% {
+    transform: rotate(90deg);
+    }
+    50% {
+    transform: rotate(180deg);
+    }
+    75% {
+    transform: rotate(270deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes RotacionCuboBlanco {
+    0% {
+    transform: rotate(45deg);
+    }
+    25% {
+    transform: rotate(-45deg);
+    }
+    50% {
+    transform: rotate(-135deg);
+    }
+    75% {
+    transform: rotate(-225deg);
+    }
+    100% {
+    transform: rotate(-315deg);
+    }
+}
+
+
+/*Paginas*/
+
+@font-face {
+    font-family: "distorter";
+    src: url("../tipografia/distorter/DistorterDemoRegular.ttf");
+  }
+  @font-face {
+    font-family: "bad signal";
+    src: url("../tipografia/bad_signal/Bad\ Signal.otf");
+  }
+  @font-face {
+    font-family: "blacklisted";
+    src: url("../tipografia/blacklisted/Blacklisted.ttf");
+  }
+  @font-face {
+    font-family: "panic";
+    src: url("../tipografia/panic/Panic.ttf");
+  }
+  @font-face {
+    font-family: "doctor glitch";
+    src: url("../tipografia/doctor_glitch/Doctor\ Glitch.otf");
+  }
+  
+  @font-face {
+    font-family: "static";
+    src: url("../tipografia/static_2/Static.ttf");
+  }
+  
+  @font-face {
+    font-family: "typewriter";
+    src: url("../tipografia/jmh_typewriter/JMH\ Typewriter.ttf");
+  }
+  
+  @font-face {
+    font-family: "typewriter Bold";
+    src: url("../tipografia/jmh_typewriter/JMH\ Typewriter-Bold.ttf");
+  }
+  
+  :root {
+      --color-nav: #f2cfda;
+      --bg-main: url("../Images/BG_diamante-2.svg");
+      --color-footer: #219bc3;
+      --font-Javascript: "panic";
+      --font-Python: "bad signal";
+      --font-Java: "static";
+      --font-Csharp: "distorter";
+      --font-Typescript: "blacklisted";
+      --font-Golang: "doctor glitch";
+      --font-parrafos: "typewriter";
+      --font-subtitulos: "typewriter";
+  }
+  
+  .tipografia-JavaScript {
+    font-family: var(--font-Javascript);
+  }
+  
+  .tipografia-Python {
+    font-family: var(--font-Python);
+  }
+  
+  .tipografia-Java {
+    font-family: var(--font-Java);
+  }
+  
+  .tipografia-Csharp {
+    font-family: var(--font-Csharp);
+  }
+  
+  .tipografia-Typescript {
+    font-family: var(--font-Typescript);
+  }
+  
+  .tipografia-Golang {
+    font-family: var(--font-Golang);
+  }
+  
+  .tipografia-subtitulos {
+    font-family: var(--font-subtitulos);
+  }
+  
+  .tipografia-parrafo {
+    font-family: var(--font-parrafos);
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .fondo-contenedor {
+      background: var(--bg-main);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  .xl {
+      font-size: 1.5em !important;
+  }
+  
+  .flip-card {
+      background-color: transparent;
+      width: 220px;
+      height: 300px;
+      perspective: 1000px;
+    }
+    
+    .title {
+      font-size: 1em;
+      text-align: center;
+      margin: 0;
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+      box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border: 1px solid #c66aab;
+      border-radius: 1rem;
+      padding: 10px;
+    }
+    
+    .flip-card-front {
+      background: linear-gradient(120deg, #68417f 20%, #219bc3 88%,
+      #c66aab 40%, #219bc3 48%);
+      color: black;
+    }
+    
+    .flip-card-back {
+      background: linear-gradient(320deg, #68417f 20%, #219bc3 88%,
+      #c66aab 40%, #219bc3 48%);
+      color: black;
+      transform: rotateY(180deg);
+    }
+  
+    .card {
+      height: 100%;
+      border-radius: 4px;
+      background: transparent;
+      display: flex;
+      gap: 5px;
+      padding: .4em;
+    }
+    
+    .card div {
+      height: 100%;
+      flex: 1;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all .5s;
+      background: transparent;
+      border: 1px solid #ff5a91;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card div:hover {
+      flex: 4;
+    }
+    
+    .card div img {
+      text-align: center;
+      transition: all .5s;
+      text-transform: uppercase;
+      color: #ff568e;
+      letter-spacing: .1em;
+    }
+    
+    .card div:hover img {
+      transform: rotate(0
+      );
+    }

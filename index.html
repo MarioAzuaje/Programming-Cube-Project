@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Images/caja logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Programming Cube</title>
+</head>
+
+<body name="Body" id="Ocultar" class="m-0 p-0 top-0 w-[100vw] h-[100vh] box-border flex flex-row" style="font-family: 'Allerta Stencil', sans-serif;">
+
+    <!--Pantalla de Carga-->
+    <div id="Cargando" class="absolute z-30 w-[100%] h-[100%] bg-[url('./Images/LoadingScreen.svg')] bg-cover flex justify-center items-center">
+        <div class="Borde_Blanco bg-gradient-to-b from-white to-[#C66AAB]">
+            <div class="Caja_Interna_Gris"></div>
+        </div>
+        <div class="Borde_Rosa bg-gradient-to-b from-white to-[#C66AAB]">
+            <div class="Caja_Interna_Gris"></div>
+            <p id="Bounce" class="absolute text-[1.5rem] text-white cursor-default">
+                Loading...
+            </p>
+        </div>
+    </div>
+
+    <div name="DivNegro" class="absolute z-0 w-[20%] h-[100%] bg-black opacity-[0.5]"></div>
+
+    <!--Botones Plegar Aside-->
+    <div name="BotonPlegarizq" class="absolute flex justify-center items-center cursor-pointer z-10 w-[60px] h-[60px] rounded-[100%] ml-[15%] mt-[1.5%]">
+        <img src="./Images/flecha izquierda.svg" alt="">
+    </div>
+
+    <div name="BotonPlegarder" class="absolute flex justify-center items-center cursor-pointer z-[-1] w-[60px] h-[60px] rounded-[100%] ml-[1%] mt-[1.5%]">
+        <img src="./Images/flecha derecha.svg" alt="">
+    </div>
+
+    <!--Redes-->
+    <div class="absolute z-10 w-[5%] h-[40%] ml-[92%] mt-[8%] text-[0.7rem] text-white flex flex-col justify-center items-center">
+        <a href="https://github.com/Nelson1411" id="Hover_Fondo_Blanco" class="w-[100%] h-[20%] flex justify-center items-center cursor-pointer">
+            <img  src="./Images/github.png" alt="" class="w-[100%] h-[100%] z-10 scale-[1.05]">
+            <div class="absolute z-0 w-[100%] h-[20%] rounded-[100%]"></div>
+        </a>
+
+        <p class="w-[100%] h-[5%] text-center flex justify-center items-center mt-[20%] mb-[30%]">
+            Nelson G.
+        </p>
+
+        <a href="https://github.com/MarioAzuaje" id="Hover_Fondo_Blanco" class="w-[100%] h-[20%] flex justify-center items-center cursor-pointer">
+            <img  src="./Images/github.png" alt="" class="w-[100%] h-[100%] z-10 scale-[1.05]">
+            <div class="absolute z-0 w-[100%] h-[20%] rounded-[100%]"></div>
+        </a>
+
+        <p class="w-[100%] h-[5%] text-center flex justify-center items-center mt-[20%] mb-[30%]">
+            marioAdev
+        </p>
+
+        <a href="https://github.com/Jcarroz12" id="Hover_Fondo_Blanco" class="w-[100%] h-[20%] flex justify-center items-center cursor-pointer">
+            <img  src="./Images/github.png" alt="" class="w-[100%] h-[100%] z-10 scale-[1.05]">
+            <div class="absolute z-0 w-[100%] h-[20%] rounded-[100%]"></div>
+        </a>
+
+        <p class="w-[100%] h-[5%] text-center flex justify-center items-center mt-[20%] mb-[30%]">
+            Jhonathan C.
+        </p>
+
+        <a href="https://www.behance.net/angelgarcia58" id="Hover_Fondo_Blanco" class="w-[100%] h-[20%] flex justify-center items-center cursor-pointer">
+            <img  src="./Images/behance.png" alt="" class="w-[100%] h-[100%] z-10 scale-[1.05]">
+            <div class="absolute z-0 w-[100%] h-[20%] rounded-[15px]"></div>
+        </a>
+
+        <p class="w-[100%] h-[5%] text-center flex justify-center items-center mt-[20%] mb-[30%]">
+            Ángel G.
+        </p>
+    </div>
+
+    <!--Flechas-->
+    <div name="Div_Flechas" class="absolute z-0 opacity-0 w-[80%] h-[80%] ml-[10%] mt-[3%] text-white flex flex-col justify-center items-center cursor-default">
+        <div class="w-[100%] h-[33.33%] flex flex-row justify-center items-start">
+            <button name="Flecha_Arriba" class="w-[20%] h-[100%]">
+                <img src="./Images/8Flechas/flecha arriba new.svg" alt="" class="w-[100%] h-[100%] scale-[0.5] cursor-pointer">
+            </button>
+        </div>
+
+        <div class="w-[100%] h-[33.33%] flex flex-row justify-center items-center mt-[5%]">
+            <button name="Flecha_Izquierda" class="w-[20%] h-[100%]">
+                <img src="./Images/8Flechas/flecha izquierda new.svg" alt="" class="w-[100%] h-[100%] scale-[0.5] cursor-pointer">
+            </button>
+
+            <div class="w-[40%] h-[100%] cursor-default"></div>
+
+            <button name="Flecha_Derecha" class="w-[20%] h-[100%]">
+                <img src="./Images/8Flechas/flecha derecha new.svg" alt="" class="w-[100%] h-[100%] scale-[0.5] cursor-pointer">
+            </button>
+        </div>
+
+        <div class="w-[100%] h-[33.33%] flex flex-row justify-center items-end mt-[5%]">
+            <button name="Flecha_Abajo" class="w-[20%] h-[100%]">
+                <img src="./Images/8Flechas/flecha abajo new.svg" alt="" class="w-[100%] h-[100%] scale-[0.5] cursor-pointer">
+            </button>
+        </div>
+    </div>
+
+    <!--Nombre Equipo-->
+    <div class="absolute z-0 w-[100%] h-[100%] text-white flex justify-end items-end cursor-default">
+        <p id="Bounce" class="m-[2%]">
+            Display: ©0de
+        </p>
+    </div>
+
+    <!--Aside-->
+    <div name="Aside" class="w-[20%] h-[100%] flex flex-col items-center p-[1.5%] text-white text-[0.9rem] fixed">
+        <!--Logo-->
+        <div class="w-[100%] h-[15%] flex justify-start">
+            <a id="Zoom" href="./index.html" class="w-[30%] h-[60%]">
+                <img src="./Images/caja logo.svg" alt="" class="w-[100%] h-[100%] scale-[1.3]">
+            </a>
+        </div>
+
+        <!--Botones-->
+        <div class="w-[100%] h-[20%] flex flex-row text-[.8rem] xl:text-[1rem]">
+            <div class="w-[50%] h-[100%] flex flex-col justify-center items-center space-y-[20%] font-medium mr-[7%]">
+                <button id="Efecto_Botones" name="Boton" class="w-[100%] h-[100%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        Javascript
+                    </p>
+                </button>
+
+                <button id="Efecto_Botones" name="Boton" class="w-[70%] h-[100%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        Python
+                    </p>
+                </button>
+
+                <button id="Efecto_Botones" name="Boton" class="w-[40%] h-[90%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        C#
+                    </p>
+                </button>
+            </div>
+
+            <div class="w-[50%] h-[100%] flex flex-col justify-center items-center space-y-[20%] font-medium ml-[7%]">
+                <button id="Efecto_Botones" name="Boton" class="w-[100%] h-[100%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        Typescript
+                    </p>
+                </button>
+
+                <button id="Efecto_Botones" name="Boton" class="w-[70%] h-[100%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        Java
+                    </p>
+                </button>
+
+                <button id="Efecto_Botones" name="Boton" class="w-[40%] h-[90%] flex justify-center items-center border-[1px] border-white rounded-[9999px]">
+                    <p class="w-[0%] h-[100%] rounded-[999px] flex justify-center items-center bg-white">
+                        Go
+                    </p>
+                </button>
+            </div>
+        </div>
+
+        <div class="w-[100%] h-[0.5%] bg-black my-[12.5%] rounded-[9999px] bg-gradient-to-r from-[#C66AAB] to-white"></div>
+
+        <!--Introducción/Instrucciones-->
+        <p class="w-[100%] text-center text-[1.2rem]">
+            ¡Hola!, Bienvenid@ a
+
+            <br>
+
+            <span id="ZoomLetra" class="cursor-default text-[1.5rem] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#C66AAB] to-white">
+                Programming Cube
+            </span>
+        </p>
+
+        <p class="w-[100%] text-left mt-[10%] text-[0.8rem] leading-[160%]">
+            Aquí encontrarás información sobre los lenguajes de
+            programación más relevantes en la actualidad. ¡Disfrúalo!
+
+            <br>
+            <br>
+
+            <span class="underline underline-offset-4">
+                Te enseño a interactuar con él:
+            </span>
+
+            <br>
+            <br>
+
+            <span class="cursor-default text-[1.5rem] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#C66AAB] to-white">1.</span> Selecciona el lenguaje que deseas aprender dando click a su botón asignado.
+            <br>
+            <br>
+            <span class="cursor-default text-[1.5rem] font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#C66AAB] to-white">2.</span> Da click en el logo del lenguaje y descubre la información.
+        </p>
+
+        <p class="w-[100%] text-center mt-[10%] text-[1rem] leading-[160%]">
+            ¿Qué esperas?, ¡Comienza tu aprendizaje!
+        </p>
+    </div>
+
+    <!--Cubo-->
+    <div name="Contenedor_Container_Cubo" class="w-[100%] h-[100%] text-black text-[1.3rem] pl-[20%] xl:pl-[15%] bg-[url('./Images/Fondo.jpeg')] bg-cover">
+        <div id="Container" class="relative flex justify-center items-center w-[100%] h-[100%] top-[-250px]">
+            <div name="Dado" class="Cubo">
+                <a href="./paginas/javascript.html" id="Cubo-Front" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        Javascript
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/Javascript logo.svg" alt="" class="w-[90%] h-[90%] scale-">
+                    </div>
+                </a>
+
+                <a href="./paginas/python.html" id="Cubo-Back" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        Python
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/python.svg" alt="" class="w-[90%] h-[90%]">
+                    </div>
+                </a>
+
+                <a href="./paginas/csharp.html" id="Cubo-Left" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        C#
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/Csharp_logo.svg" alt="" class="w-[90%] h-[90%] scale-[1.2]">
+                    </div>
+                </a>
+
+                <a href="./paginas/typescript.html" id="Cubo-Right" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        Typescript
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/typescript logo.svg" alt="" class="w-[90%] h-[90%]  scale-[1.2]">
+                    </div>
+                </a>
+
+                <a href="./paginas/java.html" id="Cubo-Top" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        Java
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/java.svg" alt="" class="w-[90%] h-[90%] scale-[1.2]">
+                    </div>
+                </a>
+
+                <a href="./paginas/golang.html" id="Cubo-Bottom" class="absolute w-[200px] h-[200px] flex flex-col bg-gradient-to-b from-white to-[#C66AAB] border-[5px] border-black cursor-pointer p-[2%]">
+                    <p class="w-[100%] h-[15%]">
+                        Go
+                    </p>
+
+                    <div class="w-[100%] h-[85%] flex justify-center items-center">
+                        <img src="./Images/go.svg" alt="" class="w-[90%] h-[90%]">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./js/Pantalla_Carga.js"></script>
+<script src="./js/Logic.js"></script>
+<script src="./js/Plegar.js"></script>
+<script src="./js/Flechas.js"></script>
+</html>
